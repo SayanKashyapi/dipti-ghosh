@@ -1,0 +1,118 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  overflow: hidden;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container for Content */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+/* Main Title */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Introductory Text */
+.intro,
+.closing {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Blockquote for Poetic Quotes */
+.quote {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 10px 20px;
+  border-left: 4px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Proposal Button */
+button {
+  font-size: 1.3rem;
+  padding: 15px 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Floating Hearts Animation */
+.heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #e91e63;
+  transform: rotate(45deg);
+  animation: float 6s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #e91e63;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -12.5px;
+  left: 0;
+}
+
+.heart:after {
+  left: 12.5px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg) scale(0.5);
+    opacity: 0;
+  }
+}
